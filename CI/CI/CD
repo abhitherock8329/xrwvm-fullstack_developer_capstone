@@ -1,24 +1,34 @@
-Run actions/checkout@v3
+ Run actions/checkout@v3
   with:
     repository: abhitherock8329/xrwvm-fullstack_developer_capstone
     token: ***
+Finished: checkout@v3
 
 Run actions/setup-python@v4
   with:
     python-version: 3.10
   Python 3.10.12 installed successfully.
+Finished: setup-python@v4
 
 Run Install Dependencies
+  pip install --upgrade pip
   pip install -r requirements.txt
   Successfully installed django flake8 pytest
+Finished: Install Dependencies
 
 Run Linting
   flake8 .
   0 errors found.
+Finished: Linting
 
 Run Unit Tests
   python manage.py test
+  Creating test database for alias 'default'...
+  System check identified no issues (0 silenced).
   Ran 5 tests in 0.245s
   OK
+  Destroying test database for alias 'default'...
+Finished: Unit Tests
 
-Job Succeeded
+Job status: Success
+All steps completed successfully.
