@@ -1,0 +1,40 @@
+curl -X GET http://localhost:3000/djangoapp/get_cars
+
+[
+  {
+    "CarMake": {
+      "name": "Toyota",
+      "description": "Japanese Automaker"
+    },
+    "CarModel": [
+      {
+        "name": "Camry",
+        "type": "Sedan",
+        "year": 2023
+      },
+      {
+        "name": "Corolla",
+        "type": "Sedan",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "CarMake": {
+      "name": "Honda",
+      "description": "Japanese Automaker"
+    },
+    "CarModel": [
+      {
+        "name": "Civic",
+        "type": "Sedan",
+        "year": 2023
+      },
+      {
+        "name": "CR-V",
+        "type": "SUV",
+        "year": 2023
+      }
+    ]
+  }
+]
