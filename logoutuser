@@ -1,3 +1,6 @@
-curl -X POST http://localhost:3000/djangoapp/logout
+ curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"userName": "admin"}' \
+  http://localhost:3000/djangoapp/logout
 
-{"userName": "", "status": "Logged out"}
+{"status": "Logged out", "userName": ""}
