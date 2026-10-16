@@ -1,0 +1,16 @@
+curl -X GET http://localhost:3000/djangoapp/fetchDealer/15
+
+[
+  {
+    "id": 15,
+    "city": "Dallas",
+    "state": "Texas",
+    "st": "TX",
+    "address": "7 Northfield Drive",
+    "zip": "75226",
+    "lat": "32.7887",
+    "long": "-96.7676",
+    "short_name": "Solarbreeze",
+    "full_name": "Solarbreeze Car Dealership"
+  }
+]
