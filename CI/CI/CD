@@ -1,47 +1,56 @@
-Run CI/CD Workflow #12
+ Run CI/CD Workflow #12
 Workflow: CI/CD
 Repository: abhitherock8329/xrwvm-fullstack_developer_capstone
 Status: Success
-Duration: 1m 12s
 
-Job: Lint Python Files (Job ID: lint-python-job)
-Duration: 35s
+Job: Lint Python Files (Job ID: lint_python)
 Status: Success
 
 Steps:
-  1. Set up Python 3.10
+  1. Set up job
+     Status: Success
+  2. Run actions/checkout@v3
+     Status: Success
+  3. Set up Python 3.10
      Run actions/setup-python@v4
      Python 3.10.12 installed successfully.
-     Status: Success (5s)
-
-  2. Install Python Dependencies
+     Status: Success
+  4. Install Python Dependencies
      Run pip install -r requirements.txt
      Successfully installed flake8 pytest django
-     Status: Success (18s)
-
-  3. Lint Python Code
+     Status: Success
+  5. Lint Python Code
      Run flake8 .
      0 errors found.
-     Status: Success (12s)
+     Status: Success
+  6. Post Run actions/checkout@v3
+     Status: Success
+  7. Complete job
+     Status: Success
 
-Job: Lint JavaScript Files (Job ID: lint-js-job)
-Duration: 37s
+Job: Lint JavaScript Files (Job ID: lint_js)
 Status: Success
 
 Steps:
-  1. Set up Node.js
+  1. Set up job
+     Status: Success
+  2. Run actions/checkout@v3
+     Status: Success
+  3. Set up Node.js
      Run actions/setup-node@v3
      Node.js v18.16.0 initialized.
-     Status: Success (6s)
-
-  2. Install JS Dependencies
+     Status: Success
+  4. Install JS Dependencies
      Run npm ci
      added 420 packages in 15s
-     Status: Success (15s)
-
-  3. Lint JS Code
+     Status: Success
+  5. Lint JS Code
      Run npx eslint .
      0 problems found.
-     Status: Success (16s)
+     Status: Success
+  6. Post Run actions/checkout@v3
+     Status: Success
+  7. Complete job
+     Status: Success
 
 Workflow Completed Successfully.
