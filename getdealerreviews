@@ -1,0 +1,16 @@
+curl -X GET http://localhost:3000/djangoapp/get_reviews/dealer/15
+
+[
+  {
+    "id": 1,
+    "name": "Upbeat Customer",
+    "dealership": 15,
+    "review": "Great service and friendly staff! Highly recommend this dealership.",
+    "purchase": true,
+    "purchase_date": "02/15/2023",
+    "car_make": "Toyota",
+    "car_model": "Camry",
+    "car_year": 2021,
+    "sentiment": "positive"
+  }
+]
