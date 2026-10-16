@@ -1,0 +1,16 @@
+curl -X GET http://localhost:3000/djangoapp/fetchDealers/KS
+
+[
+  {
+    "id": 8,
+    "city": "Topeka",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "2 Doe Crossing Crossing",
+    "zip": "66667",
+    "lat": "39.0429",
+    "long": "-95.7697",
+    "short_name": "Viva",
+    "full_name": "Viva Car Dealership"
+  }
+]
