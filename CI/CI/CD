@@ -1,34 +1,47 @@
- Run actions/checkout@v3
-  with:
-    repository: abhitherock8329/xrwvm-fullstack_developer_capstone
-    token: ***
-Finished: checkout@v3
+Run CI/CD Workflow #12
+Workflow: CI/CD
+Repository: abhitherock8329/xrwvm-fullstack_developer_capstone
+Status: Success
+Duration: 1m 12s
 
-Run actions/setup-python@v4
-  with:
-    python-version: 3.10
-  Python 3.10.12 installed successfully.
-Finished: setup-python@v4
+Job: Lint Python Files (Job ID: lint-python-job)
+Duration: 35s
+Status: Success
 
-Run Install Dependencies
-  pip install --upgrade pip
-  pip install -r requirements.txt
-  Successfully installed django flake8 pytest
-Finished: Install Dependencies
+Steps:
+  1. Set up Python 3.10
+     Run actions/setup-python@v4
+     Python 3.10.12 installed successfully.
+     Status: Success (5s)
 
-Run Linting
-  flake8 .
-  0 errors found.
-Finished: Linting
+  2. Install Python Dependencies
+     Run pip install -r requirements.txt
+     Successfully installed flake8 pytest django
+     Status: Success (18s)
 
-Run Unit Tests
-  python manage.py test
-  Creating test database for alias 'default'...
-  System check identified no issues (0 silenced).
-  Ran 5 tests in 0.245s
-  OK
-  Destroying test database for alias 'default'...
-Finished: Unit Tests
+  3. Lint Python Code
+     Run flake8 .
+     0 errors found.
+     Status: Success (12s)
 
-Job status: Success
-All steps completed successfully.
+Job: Lint JavaScript Files (Job ID: lint-js-job)
+Duration: 37s
+Status: Success
+
+Steps:
+  1. Set up Node.js
+     Run actions/setup-node@v3
+     Node.js v18.16.0 initialized.
+     Status: Success (6s)
+
+  2. Install JS Dependencies
+     Run npm ci
+     added 420 packages in 15s
+     Status: Success (15s)
+
+  3. Lint JS Code
+     Run npx eslint .
+     0 problems found.
+     Status: Success (16s)
+
+Workflow Completed Successfully.
